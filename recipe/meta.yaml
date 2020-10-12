@@ -1,4 +1,4 @@
-{% set version = '0.17.0' %}
+{% set version = '0.20.1' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,13 +10,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/mosaicData_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/mosaicData/mosaicData_{{ version }}.tar.gz
-  sha256: 09375e8fa4e7ca2ca6572f88c199713fa06061d415daa8bbc6d357516aabe013
+  sha256: 51f66a917a97722859a7fa04ca047caed9478eda5282b99fd8177275f4e6b916
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
-  number: 1002
   noarch: generic
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -36,7 +35,7 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=mosaicData
-  license: GPL (>= 2)
+  license: GPL-2.0-or-later
   summary: Data sets from Project MOSAIC (<http://mosaic-web.org>) used to teach mathematics,
     statistics, computation and modeling.  Funded by the NSF, Project MOSAIC is a community
     of educators working to tie together aspects of quantitative work that students
