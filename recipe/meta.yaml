@@ -35,6 +35,7 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=mosaicData
+  dev_url: https://github.com/ProjectMOSAIC/mosaicData
   license: GPL-2.0-or-later
   summary: Data sets from Project MOSAIC (<http://mosaic-web.org>) used to teach mathematics,
     statistics, computation and modeling.  Funded by the NSF, Project MOSAIC is a community
