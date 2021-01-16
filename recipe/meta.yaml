@@ -1,4 +1,4 @@
-{% set version = '0.20.1' %}
+{% set version = "0.20.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/mosaicData_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/mosaicData/mosaicData_{{ version }}.tar.gz
-  sha256: 51f66a917a97722859a7fa04ca047caed9478eda5282b99fd8177275f4e6b916
+  sha256: e4654d9a437a85a161edef3d693c373e88248a2c0a035a877b4efef99f2b6e40
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   noarch: generic
   number: 0
   rpaths:
@@ -37,13 +37,10 @@ about:
   home: https://CRAN.R-project.org/package=mosaicData
   dev_url: https://github.com/ProjectMOSAIC/mosaicData
   license: GPL-2.0-or-later
-  summary: Data sets from Project MOSAIC (<http://mosaic-web.org>) used to teach mathematics,
-    statistics, computation and modeling.  Funded by the NSF, Project MOSAIC is a community
-    of educators working to tie together aspects of quantitative work that students
-    in science, technology, engineering and mathematics will need in their professional
-    lives, but which are usually taught in isolation, if at all.
+  summary: Data sets from Project MOSAIC (<http://mosaic-web.org>) used to teach mathematics, statistics, computation and modeling.  Funded by the NSF, Project MOSAIC is a community of educators working to tie together aspects of quantitative work that students in science, technology, engineering and mathematics will need
+    in their professional lives, but which are usually taught in isolation, if at all.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
