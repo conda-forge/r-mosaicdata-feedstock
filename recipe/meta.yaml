@@ -1,4 +1,4 @@
-{% set version = "0.20.2" %}
+{% set version = "0.20.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/mosaicData_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/mosaicData/mosaicData_{{ version }}.tar.gz
-  sha256: e4654d9a437a85a161edef3d693c373e88248a2c0a035a877b4efef99f2b6e40
+  sha256: 0910c5218d1b664eb5053caa63a16f16a2769b7257df067afdd09f4f04f627e9
 
 build:
   merge_build_host: true  # [win]
