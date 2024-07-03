@@ -1,6 +1,5 @@
 {% set version = "0.20.4" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-mosaicdata
@@ -13,9 +12,8 @@ source:
   sha256: 70b256003b8183fbda5e4bf6180fe444131525e3a53274c15476aa4b8688d178
 
 build:
-  merge_build_host: true  # [win]
   noarch: generic
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
